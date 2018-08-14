@@ -70,12 +70,16 @@ function createRock(x) {
 
 function endGame() {
     clearInterval(gameInterval)
+    
     let i=0
+    
     while (i<ROCKS.length) {
       ROCKS[i].style.display=`none`
       i++
     }
+    
     window.removeEventListener('keydown', moveDodger)
+    
     alert (`You Lose!`)
 }
 
